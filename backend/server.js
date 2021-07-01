@@ -17,14 +17,17 @@ const tagRoutes = require('./routes/tag');
 const app = express();
 
 // db
-mongoose.connect(process.env.DATABASE_CLOUD, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true
-}).catch(err => {
-    console.log(err);
-}).then(() => console.log('DB connected'));
+mongoose
+    .connect(process.env.DATABASE_CLOUD, {
+        useNewUrlParser: true,
+        useCreateIndex: true,
+        useFindAndModify: false,
+        useUnifiedTopology: true
+    })
+    .then(() => console.log('DB connected'))
+    .catch(err => {
+        console.log(err);
+    });
 
 // middlewares
 app.use(morgan('dev'));
