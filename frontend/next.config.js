@@ -7,6 +7,7 @@ module.exports = {
     DOMAIN_PRODUCTION: 'https://domain-name.com',
     DOMAIN_DEVELOPMENT: 'http://localhost:3000',
     FB_APP_ID: 'facebook-app-id',
-    DISQUS_SHORTNAME: ''
+    DISQUS_SHORTNAME: '',
+    GOOGLE_CLIENT_ID: ''
   }
 }
